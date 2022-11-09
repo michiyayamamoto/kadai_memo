@@ -29,6 +29,7 @@ $("#save").on('click', function () {
         }
         // $("#key").html("");
         // $("#memo").html("");
+        addlist()
         });
 
 //2.clear クリックイベント
@@ -49,16 +50,18 @@ for (let i = 0; i < localStorage.length; i++) {
 
 
 // 4. クリックした場所のIDを取得して、画面に表示する
-$('#allnote li').click(function() {
+function addlist(){
+    $('#allnote li').click(function() {
     let id_name = $(this).attr('id');
     let text = localStorage.getItem(id_name);
     console.log(id_name,"id取得できているか")
     console.log(text,"text取得できているか")
-    $("#memo").html(text);
-    $("#key").html(id_name);
-
-
+    $("#memo").val(text);
+    $("#key").val(id_name);
+    // $("#key").html(id_name);
     // $("#key").html(key);
     // $("#memo").html(value);
 
 });
+}
+addlist()

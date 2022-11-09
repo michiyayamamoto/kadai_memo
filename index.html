@@ -22,22 +22,30 @@
         <div class="contents">
     <!-- sidebar section　位置は左 -->
             <div class="sidebar">
-                <header>メモ一覧</header>
+                <header>All Notes</header>
                 <!-- id:allnoteにどんどん追加される。 -->
                 <ul id="allnote">
                     <li>
-                        ここに出るという目印
+                        ここに追加されるという目印
                     </li>
                 </ul>
             </div>
 <!-- テキストエリア　位置は右 -->
             <div class="note">
-                <input type="text" id="key" placeholder="メモのタイトルを入れてください。">
-                <textarea id="memo" placeholder="本文を入れてください"></textarea>
-                <ul>
-                    <li id="save">Save</li>
-                    <li id="crear">Clear</li>
-                </ul>
+                <header class="noteheader">
+                    <a href="" class="iconleft"><i class="fa-thin fa-circle-info"></i></a>
+                    <a href="" class="iconright"><i class="fa-thin fa-circle-info"></i></a>
+                    <a href="" class="iconright"><i class="fa-thin fa-circle-info"></i></a>
+                    <a href="" class="iconright"><i class="fa-thin fa-circle-ellipsis-vertical"></i></a>
+                </header>
+                <!-- <div class="text"> -->
+                    <input type="text" id="key" placeholder="メモのタイトルを入れてください。">
+                    <textarea id="memo" placeholder="本文を入れてください"></textarea>
+                    <ul>
+                        <li id="save" class="savebutton">Save</li>
+                        <li id="clear" class="clearbutton">Clear</li>
+                    </ul>
+                <!-- </div> -->
             </div>
         </div>
     </main>
